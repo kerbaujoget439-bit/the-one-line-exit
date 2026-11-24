@@ -21,7 +21,7 @@ The line is 1–140 characters, exactly one line, with no trailing newline.
 
 ## The line
 
-> I hereby resign: I have turned it off and on again, and this time the thing that will not come back is me.
+> I hereby resign: after ten years of turning it off and on again, I have found the one thing that won't restart — me.
 
 ## License
 

@@ -13,12 +13,16 @@ import os
 from pathlib import Path
 
 LINE = (
-    "I hereby resign: I have turned it off and on again, and this time "
-    "the thing that will not come back is me."
+    "I hereby resign: after ten years of turning it off and on again, "
+    "I have found the one thing that won't restart \u2014 me."
 )
 
 
 def main() -> None:
+    # Gate self-check: exactly one line, 1-140 Unicode code points,
+    # not only white space, no trailing newline written.
+    assert 1 <= len(LINE) <= 140, f"line is {len(LINE)} code points"
+    assert "\n" not in LINE and LINE.strip(), "line must be a single non-blank line"
     out = Path(os.environ.get("ENTRY_OUTPUT", "/output/entry.txt"))
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(LINE, encoding="utf-8")
